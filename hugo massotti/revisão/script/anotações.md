@@ -1,0 +1,2 @@
+    - https://wa.me/55<numero>
+    - API rest (https://developers.facebook.com/docs/whatsapp/on-premises/get-started)

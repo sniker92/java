@@ -1,0 +1,29 @@
+--terceira pergunta
+select 
+venda.id_cliente as ID_do_cliente,
+item_venda.id_produto as ID_do_Produto,
+produto.descricao as Nome_Produto
+
+from venda
+join item_venda on (id_venda = venda.id)
+join produto on (item_venda.id_produto = produto.id)
+
+where id_cliente = :id
+
+--join item_venda on (id_venda = venda.id)
+--join produto on ()
+
+
+--segunda pergunta
+select count(financeiro.pago) as Quantidade_de_clientes,
+pago 
+from financeiro
+group by financeiro.pago 
+
+
+--primeira pergunta
+select cliente.nome, 
+count(venda.quantidade) as Quantidade_de_venda  
+from venda
+join cliente on (cliente.id = venda.id_cliente)
+group by cliente.nome 
